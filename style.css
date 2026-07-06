@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* nav started*/
+nav{
+    border-bottom: 2px solid #5D6658;
+    height: 60px;
+    width: 100%;
+}
+.mobile-nav{
+    display:none;
+}
+.nav-links{
+    display:flex;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.nav-links li{
+    list-style: none;
+    padding: 20px;
+}
+.nav-links li a{
+    text-decoration: none;
+    color:#353E43;
+    padding: 10px;
+    
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
+}
+.nav-links li:hover{
+    background-color:#a3a3a3;
+    transition: .3s ease-in-out;
+}
+
+
+.logo-li{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 0px 20px;
+    border-right:2px solid #5D6658;
+    border-left:2px solid #5D6658;
+}
+.header-logo{
+    
+    height: 3em;
+    width: 5em;
+   
+}
+.header-logo:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+     transition: .3s ease-in-out;
+}
+
+/* nav ended/
+
+
+/*main section started*/
+
+.hero-section{
+   display: grid;
+   grid-template-columns: 1fr 120px 1fr;
+   border-bottom: 2px solid #5D6658;
+   gap: 1em;
+
+}
+.hero-section .hero-left{
+    flex:1 1 44%;
+   padding: 10px 0 10px 0;
+   padding-left: 4em;
+   padding-right: 1em;
+}
+.hero-left h2{
+    font-size: 2em;
+    color: #353E43;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+margin-bottom: .5em;
+    padding-top:1em;
+}
+.hero-left p{
+    font-size: 1.2em;
+    color: #353E43;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: justify;
+}
+.hero-left button{
+    background-color: #353E43;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 3em;
+}
+.hero-left button:hover{
+    background-color: #000;
+    transition: .3s ease-in-out;
+}
+.hero-section .social-media{
+   display: flex;
+   flex-direction: column;
+   flex:1 1 9%;
+   align-items: center;
+   justify-content: space-around;
+   padding: .5em 0;
+
+ 
+}
+.hero-section .social-media img{
+    height: 2em;
+    width: 2em;
+}
+
+
+.hero-section .hero-right{
+    flex:1 1 46%;
+    text-align: center;
+    display: flex;
+    justify-content: end;
+    padding-right: 8em;
+   
+}
+.hero-right h2{
+    font-size: 2em;
+    color: #353E43;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 1em;
+    padding-left: 1.5em;
+    text-align: left;
+    height:fit-content
+}
+.hero-right img{
+    height: 100%;
+    max-width: 100%;
+    min-width: 10%;
+}
+
+.resume-btn-mobile{
+    display:none;
+}
+@media screen and (max-width: 768px){
+
+    .mobile-nav{
+        display:block;
+    }
+    .desktop-nav{
+        display:none;
+    }
+    nav{
+        border-bottom: 2px solid #5D6658;
+        height: 60px;
+        width: 100%;
+    }
+    .mobile-nav .nav-links{
+        display:flex;
+        height: 100%;
+        justify-content: space-between;
+    }
+    .mobile-nav .nav-links li{
+        list-style: none;
+       border: none;
+       padding: 20px;
+    }
+    .hero-section{
+        grid-template-columns: 80px 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0;
+        border: none;
+    }
+    .hero-section .hero-left{
+        padding-left: 1em;
+        padding-top:0;
+        grid-column: 1/span 2;
+            border-top: 2px solid #5D6658;
+    }
+    .hero-section .hero-left h2{
+        font-size: 1.5em;
+        padding-top: .5em;
+    }
+    .hero-section .hero-right{
+        grid-row:1;
+        grid-column: 2;
+        justify-content: center;
+    
+        padding-right: .1em;
+    
+
+    }
+    .hero-section .hero-right img{
+        height: 100%;
+        max-width: 80%;
+        min-width: 10%;
+        padding-top: 1em;
+    }
+    .hero-section .social-media{
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 0;
+        grid-row: 1;
+      height:100%;
+      width:fit-content;
+        margin:0 1em;
+            align-items: center;
+            gap: 4em;
+            border-left: 2px solid #5D6658;
+              border-right: 2px solid #5D6658;
+              padding: 1em;
+           
+              
+    }
+    .resume-btn-desktop{
+        display:none;
+    }
+    .resume-btn-mobile{
+        display:block;
+        background-color: #353E43;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: none;
+        margin-top: 1em;
+        font-size: .8em;
+    }
+     .resume-btn-mobile:hover{
+        background-color: #000;
+        transition: .3s ease-in-out;
+     }
+     .hero-right-first{
+        display:flex;
+        flex-direction:column;
+     }
+     .hero-right-first button{
+        align-self: center;
+        margin-left: 2em;
+        margin-top: 2em;
+     }
+     .hero-right-first h2{
+        align-self: center;
+     }
+     .mobile-nav .logo-more{
+       display:flex;
+        align-items:center; 
+        justify-content:center;
+     }
+     .mobile-nav .logo-more img{
+        height: 1.5em;
+        width: 1.5em;
+     }
+     .logo-li img{
+        height: 2em;
+        width: 3em;
+     }
+
+     .menu-logo:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+     }
+     .logo-more{
+        position:relative;
+     }
+     .nav-links-mobile{  
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 100px;
+        background-color: #353E43;
+        z-index: 1;
+        display: none;
+     }
+     .nav-links-mobile li{
+        list-style: none;
+        margin:0;
+        padding: 0;
+     }
+     .nav-links li{
+        padding: 0;
+     }
+     .nav-links-mobile li a{
+        text-decoration: none;
+        color:white;
+        padding: 0 0;
+        margin: 0;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+     }
+     .logo-more:hover .nav-links-mobile{
+        display: block;
+        transition: .3s ease-in-out;
+     }
+
+     .header-logo:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: .3s ease-in-out;
+     }
+}
